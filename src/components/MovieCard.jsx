@@ -1,8 +1,20 @@
 import React from 'react'
 
-const MovieCard = () => {
+const MovieCard = (info) => {
+
+  const {title,year,poster} = info
+  
   return (
-    <div>MovieCardddd</div>
+    <div>
+        <div>
+          <img src={poster}/>
+          <p>MOVIE{title}</p>
+        </div>
+        <div>
+          <p>{title}</p>
+          <p>{year}</p>
+        </div>
+    </div>
   )
 }
 
