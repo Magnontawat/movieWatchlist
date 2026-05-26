@@ -5,12 +5,10 @@ import SettingPage from './pages/SettingPage'
 
 function App() {
   return (
-    <>
+   <div className="bg-[#0f0f13] min-h-screen text-white max-w-sm mx-auto relative">
     <HomePage />
-    <WatchlistPage/>
-    <SettingPage/>
-    <BottomNav /> 
-    </>
+    <BottomNav />
+   </div>
   )
 }
 
