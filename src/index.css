@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Mitr&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Prompt:wght@400;500&display=swap');
 @import "tailwindcss";
 
-body {
-  background-color: #0f0f13;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
 }

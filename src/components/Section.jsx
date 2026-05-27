@@ -4,15 +4,15 @@ import { dummyData } from "../data/dummyData";
 
 const Section = ({ title }) => {
   return (
-    <div className="mt-7 py-4">
+    <div className="pb-7">
       {/* ส่วนหัวของ Section */}
-      <div className="flex justify-between mx-4">
+      <div className="flex justify-between mx-3 pb-1">
         <h2>{title}</h2>
-        <button>See all</button>
+        <button className="text-sm text-[#868686]"> See all </button>
       </div>
 
       {/* ส่วนของ Card */}
-      <div className="flex justify-between h-50 border ">
+      <div className="flex justify-between gap-4 overflow-x-auto no-scrollbar">
         {dummyData.map((item) => {
           return <MovieCard key={item.id} title={item.title} year={item.year} poster={item.poster} />
         })}
