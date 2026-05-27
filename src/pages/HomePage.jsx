@@ -1,9 +1,14 @@
 import React from "react";
 import Section from "../components/Section";
 import { Search,Popcorn   } from 'lucide-react'
+import { useTrendingMovies } from "../hooks/useTrendingMovies";
+import { useTrendingTv } from "../hooks/useTrendingTv";
 
 const HomePage = () => {
 
+  const {moviesTrend}=useTrendingMovies()  
+  const {tvTrending}=useTrendingTv()  
+  
   return (
     <div className="pt-3 pb-35">
 
@@ -30,13 +35,13 @@ const HomePage = () => {
 
 {/* รายการต่างๆ */}
       {/* trending movie */}
-      <Section title="Trending Movies" />
+      <Section title="Trending Movies" movies={moviesTrend} />
       {/* trending Tv */}
-      <Section title="Trending Tv" />
+      <Section title="Trending Tv" movies={tvTrending} />
       {/*  Now Playing */}
-      <Section title="Now Playing" />
+      {/* <Section title="Now Playing" /> */}
       {/* On The Air */}
-      <Section title="On The Air" />
+      {/* <Section title="On The Air" /> */}
 
     </div>
   );

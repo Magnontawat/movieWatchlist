@@ -4,9 +4,9 @@ import WatchlistPage from "./pages/WatchlistPage";
 import SettingPage from "./pages/SettingPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-
 function App() {
   return (
+
     <BrowserRouter>
       <div className="bg-[#161616] min-h-screen text-white max-w-auto mx-auto relative">
         <Routes>
@@ -16,9 +16,10 @@ function App() {
         </Routes>
       </div>
       <BottomNav/>
-    </BrowserRouter>
-  );
 
+    </BrowserRouter>
+    
+  );
 }
 
 export default App;

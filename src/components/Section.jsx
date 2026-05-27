@@ -1,8 +1,8 @@
 import React from "react";
 import MovieCard from "./MovieCard";
-import { dummyData } from "../data/dummyData";
 
-const Section = ({ title }) => {
+const Section = ({ title,movies =[] }) => {
+
   return (
     <div className="pb-7">
       {/* ส่วนหัวของ Section */}
@@ -13,8 +13,8 @@ const Section = ({ title }) => {
 
       {/* ส่วนของ Card */}
       <div className="flex justify-between gap-4 overflow-x-auto no-scrollbar">
-        {dummyData.map((item) => {
-          return <MovieCard key={item.id} title={item.title} year={item.year} poster={item.poster} />
+        {movies.map((item) => {
+          return <MovieCard key={item.id} title={item.title || item.name} release_date={item.release_date} poster_path={item.poster_path} first_air_date={item.first_air_date} />
         })}
       </div>
     </div>
