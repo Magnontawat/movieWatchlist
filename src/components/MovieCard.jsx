@@ -7,13 +7,18 @@ const MovieCard = (info) => {
 
   return (
     <div>
-      <div className="relative h-56 w-38 rounded-xl overflow-hidden ">
+      
+      {/* รูปภาพการ์ด */}
+      <div className="h-56 w-38 rounded-xl overflow-hidden ">
         <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} className="w-full h-full" />
       </div>
+
+      {/* ชื่อหนังข้างร่างการ์ด */}
       <div className="pl-2">
-          <p className="text-md">{title}</p>
+          <p className="text-sm">{title}</p>
           <p className="text-xs text-[#979797]">{year}</p>
         </div>
+
     </div>
   );
 };

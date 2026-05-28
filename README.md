@@ -6,7 +6,3 @@
 
 {BASE_URL}{POINT_URL}?api_key={KEY}
 
-https://api.themoviedb.org/3/trending/movie/week?api_key=KEY
-https://api.themoviedb.org/3/trending/tv/week?api_key=KEY
-https://api.themoviedb.org/3/movie/now_playing?api_key=KEY
-https://api.themoviedb.org/3/tv/on_the_air?api_key=KEY
