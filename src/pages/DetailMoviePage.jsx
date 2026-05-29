@@ -51,7 +51,6 @@ const DetailMoviePage = () => {
         <h3 className="text-[white]">Overview</h3>
         <span className="mt-5 text-[white] text-sm">{overview}</span>
       </div>
-      
       <BottomNav/>
     </div>
   );

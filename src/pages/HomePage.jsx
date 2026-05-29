@@ -23,13 +23,14 @@ const HomePage = () => {
 
       {/* -------Header -------*/}
       <div className="flex items-center gap-2 px-2 pt-12 pb-4 ">
-        <div className="bg-violet-600 w-8 h-8 rounded-lg flex items-center justify-center">
+        <div className="bg-violet-600 w-8 h-8 rounded-lg flex items-center justify-center ml-3">
           <Popcorn className="w-5 h-5 text-[white]" />
         </div>
         <div className="text-lg font-semibold text-white">WatchList</div>
       </div>
 
       {/* -------ช่อง search -----*/}
+      
       <div className="bg-[grey] rounded-lg h-11 flex items-center gap-2 px-2 mx-4 mb-5">
         <Search className="w-6 h-6 text-white" />
         <input
