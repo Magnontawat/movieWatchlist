@@ -15,3 +15,7 @@ TopRateTV :  https://api.themoviedb.org/3/tv/top_rated
 useTrendingTv :https://api.themoviedb.org/3/trending/tv/week?api_key=
 
 Base: https://api.themoviedb.org/3
+
+ใช้ คะแนน IMDB จากเว็บ OMDB
+(เก็บ key ไว้ใน email magnumyg97)
+https://www.omdbapi.com/?i={imdb_id}&apikey={YOUR_KEY}
