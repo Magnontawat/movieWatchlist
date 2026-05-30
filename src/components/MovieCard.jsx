@@ -2,14 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const MovieCard = (info) => {
-  const { title, release_date, poster_path, first_air_date,id } = info;
+  const { title, release_date, poster_path, first_air_date, id, type} = info;
 
   const year =
     release_date?.slice(0, 4) || first_air_date?.slice(0, 4) || "N/A";
   
   return (
     <div className="">
-      <Link to={`/detail/${id}`}>
+      <Link to={`/detail/${id}`} state={{type : type}}>
+      
         {/* รูปภาพการ์ด */}
         <div className="h-45 w-30 rounded-xl overflow-hidden ">
           <img

@@ -42,17 +42,17 @@ const HomePage = () => {
 
       {/* ---------------------รายการต่างๆ ------------------*/}
       {/*  Now Showing */}
-      <Section title="Now Showing" movies={nowShowing} />
+      <Section title="Now Showing" movies={nowShowing} type="movie" />
       {/*  upcoming */}
-      <Section title="Upcoming" movies={upComing} />
+      <Section title="Upcoming" movies={upComing} type="movie" />
       {/* trending movie */}
-      <Section title="Trending Movies" movies={moviesTrend} />
+      <Section title="Trending Movies" movies={moviesTrend} type="movie" />
       {/* trending TV */}
-      <Section title="Trending TV" movies={tvTrending} />
+      <Section title="Trending TV" movies={tvTrending} type="tv"/>
       {/* Top Rated Movies*/}
-      <Section title="Top Rated Movies EVER" movies={topRateMovies} />
+      <Section title="Top Rated Movies EVER" movies={topRateMovies} type="movie"/>
       {/* Top Rated TV */}
-      <Section title="Top Rated TV EVER" movies={topRateTV} />
+      <Section title="Top Rated TV EVER" movies={topRateTV}  type="tv"/>
       <BottomNav />
     </div>
   );

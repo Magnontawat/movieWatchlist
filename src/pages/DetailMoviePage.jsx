@@ -2,12 +2,18 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDetailMovies } from "../hooks/useDetailMovies";
 import BottomNav from "./../components/BottomNav";
+import { useLocation } from "react-router-dom";
 
 const DetailMoviePage = () => {
-  const { id } = useParams();
-  const [data, isLoading] = useDetailMovies(id);
   
-  if (isLoading) return <div>Loading.....</div>;
+  const location = useLocation()
+  const type = location.state?.type
+  console.log(type)
+  const { id } = useParams();
+  const [data, isLoading] = useDetailMovies(id,type);
+
+
+  if (isLoading) return <div className="text-white">Loading.....</div>;
 
   const { respTMDB, respOMDB, keyForVideo } = data;
 
