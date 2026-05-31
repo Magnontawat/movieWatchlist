@@ -10,7 +10,7 @@ const MovieCard = (info) => {
   return (
     <div className="">
       <Link to={`/detail/${id}`} state={{type : type}}>
-      
+
         {/* รูปภาพการ์ด */}
         <div className="h-45 w-30 rounded-xl overflow-hidden ">
           <img

@@ -1,7 +1,7 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 
-const Section = ({ title,movies =[], type }) => {
+const Section = ({ title, movies =[], type }) => {
 
   return (
     <div className="pb-3">

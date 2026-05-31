@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useDetailMovies } from "../hooks/useDetailMovies";
 import BottomNav from "./../components/BottomNav";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const DetailMoviePage = () => {
   
@@ -26,6 +27,9 @@ const DetailMoviePage = () => {
           src={`https://image.tmdb.org/t/p/w500${poster_path}`}
           className="h-140 w-full object-cover block"
         />
+        <Link to="/" className="z-5 absolute top-5 left-5 border rounded-xl w-12 h-8 flex justify-center items-center border-[white]">
+          <div className="text-[white]">Back</div>
+        </Link>
         <div
           className="absolute bg-gradient-to-b bottom-0 left-0 right-0 h-full 
         from-transparent from-30%
