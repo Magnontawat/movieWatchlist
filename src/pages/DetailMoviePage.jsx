@@ -9,10 +9,8 @@ const DetailMoviePage = () => {
   
   const location = useLocation()
   const type = location.state?.type
-  console.log(type)
   const { id } = useParams();
   const [data, isLoading] = useDetailMovies(id,type);
-
 
   if (isLoading) return <div className="text-white">Loading.....</div>;
 

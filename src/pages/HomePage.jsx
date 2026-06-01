@@ -9,8 +9,7 @@ import { useTopRateMovies } from "../hooks/useTopRateMovies";
 import { useTopRateTV } from "../hooks/useTopRateTV";
 import { useFetchSearch } from "../hooks/useFetchSearch";
 import BottomNav from "./../components/BottomNav";
-import { Form } from "react-router-dom";
-
+import { Form, Link } from "react-router-dom";
 
 const HomePage = () => {
   const { moviesTrend } = useTrendingMovies();
@@ -19,10 +18,11 @@ const HomePage = () => {
   const { upComing } = useUpComing();
   const { topRateMovies } = useTopRateMovies();
   const { topRateTV } = useTopRateTV();
-  
-  const [textInput, setTextInput] = useState("");
-  const {searchResults,qty} = useFetchSearch(textInput)
 
+  const [textInput, setTextInput] = useState("");
+
+  const { searchResults, qty, isLoading } = useFetchSearch(textInput);
+  console.log(searchResults)
   const submitSearch = (e) => {
     e.preventDefault();
   };
@@ -54,6 +54,7 @@ const HomePage = () => {
             onChange={(e) => setTextInput(e.target.value)}
           />
         </form>
+
         <div
           className={`absolute transition-all duration-200 my-2 py-3 w-full
             ${
@@ -63,21 +64,29 @@ const HomePage = () => {
             }
             `}
         >
-          {/* result */}
+          {/* result จำนวน */}
 
-          <div className="text-[#999696] text-sm">
-            {qty} RESULTS
-          </div>
+          <div className="text-[#999696] text-sm">{qty} RESULTS</div>
 
           {/* จุด map */}
           <div>
-            {searchResults.map((item)=>{
-              return <div className="my-2" key={item.id}>{item.title || item.name}</div>
-            })}
-            
+            {isLoading ? (
+              <div className="text-[white]">loading...</div>
+            ) : (
+              searchResults.map((item) => (
+                <Link to={`/detail/${item.id}`} state={{type : item.media_type}} className="flex gap-4 items-center py-1" key={item.id}>
+                  <div className="w-10 h-14 rounded-sm overflow-hidden flex-shrink-0">
+                      {item.poster_path?<img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} className="w-full h-full object-cover"/>
+                      :<div className="w-full h-full bg-[#666666]" />}
+                  </div>
+                  <div className="my-2">
+                    {item.title || item.name}
+                  </div>
+                </Link>
+              ))
+            )}
           </div>
         </div>
-
       </div>
       {/* ---------------------รายการต่างๆ ------------------*/}
       {/*  Now Showing */}

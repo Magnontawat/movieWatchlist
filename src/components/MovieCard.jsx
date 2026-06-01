@@ -8,7 +8,7 @@ const MovieCard = (info) => {
     release_date?.slice(0, 4) || first_air_date?.slice(0, 4) || "N/A";
   
   return (
-    <div className="">
+    <div>
       <Link to={`/detail/${id}`} state={{type : type}}>
 
         {/* รูปภาพการ์ด */}
