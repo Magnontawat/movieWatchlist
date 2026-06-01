@@ -21,7 +21,7 @@ const HomePage = () => {
   const { topRateTV } = useTopRateTV();
   
   const [textInput, setTextInput] = useState("");
-  const searchResults = useFetchSearch(textInput)
+  const {searchResults,qty} = useFetchSearch(textInput)
 
   const submitSearch = (e) => {
     e.preventDefault();
@@ -64,15 +64,17 @@ const HomePage = () => {
             `}
         >
           {/* result */}
+
           <div className="text-[#999696] text-sm">
-            7 RESULTS
+            {qty} RESULTS
           </div>
 
           {/* จุด map */}
           <div>
-            <div className="my-2">list number 2</div>
-            <div className="my-2">list number 2</div>
-            <div className="my-2">list number 2</div>
+            {searchResults.map((item)=>{
+              return <div className="my-2" key={item.id}>{item.title || item.name}</div>
+            })}
+            
           </div>
         </div>
 
