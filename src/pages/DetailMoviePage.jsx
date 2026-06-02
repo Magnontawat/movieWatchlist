@@ -17,8 +17,8 @@ const DetailMoviePage = () => {
 
   const { respTMDB, respOMDB, keyForVideo } = data;
   console.log('check respTMDB',respTMDB)
-  const { poster_path, original_title, release_date, overview, name } = respTMDB || {};
-  console.log("original_title = ", original_title)
+  const { poster_path, title, release_date, overview, name ,first_air_date} = respTMDB || {};
+
   return (
     <div className="pb-30">
       <div className="relative">
@@ -37,9 +37,9 @@ const DetailMoviePage = () => {
         to-[#161616] to-90%"
         />
         <div className="absolute bottom-20 left-4 text-3xl font-semibold text-[#ffffff]">
-          {original_title || name}        </div>
+          {title || name}        </div>
         <div className="absolute bottom-14 text-xs left-4 text-white ">
-          {release_date}
+          {release_date || first_air_date}
         </div>
         <div className="absolute bottom-6 left-4 flex items-center gap-2">
           <span className="text-[#fcff31] font-semibold text-sm">
@@ -56,7 +56,7 @@ const DetailMoviePage = () => {
           className="absolute w-full h-50 px-5 rounded-xl"
         />
       </div>
-      <div className="px-5 pt-3">
+      <div className="px-5 pt-5">
         <h3 className="text-[white]">Overview</h3>
         <span className="mt-5 text-[white] text-sm">{overview}</span>
       </div>
