@@ -9,15 +9,16 @@ const DetailMoviePage = () => {
   
   const location = useLocation()
   const type = location.state?.type
+  console.log(type)
   const { id } = useParams();
   const [data, isLoading] = useDetailMovies(id,type);
 
   if (isLoading) return <div className="text-white">Loading.....</div>;
 
   const { respTMDB, respOMDB, keyForVideo } = data;
-
-  const { poster_path, original_title, release_date, overview } = respTMDB || {};
-
+  console.log('check respTMDB',respTMDB)
+  const { poster_path, original_title, release_date, overview, name } = respTMDB || {};
+  console.log("original_title = ", original_title)
   return (
     <div className="pb-30">
       <div className="relative">
@@ -36,7 +37,7 @@ const DetailMoviePage = () => {
         to-[#161616] to-90%"
         />
         <div className="absolute bottom-20 left-4 text-3xl font-semibold text-[#ffffff]">
-          {original_title}        </div>
+          {original_title || name}        </div>
         <div className="absolute bottom-14 text-xs left-4 text-white ">
           {release_date}
         </div>
