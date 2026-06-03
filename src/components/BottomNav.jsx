@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 const BottomNav = () => {
   return (
-    <div className="fixed w-full left-0 bottom-0 bg-black border-t border-[#4d4d4d] flex py-3  h-20 justify-between md:max-w-[390px] border border-[#888787] left-1/2 -translate-x-1/2 ">
+    <div className="fixed w-full left-0 bottom-0 bg-black border-t border-[#4d4d4d] flex py-3  h-20 justify-between md:max-w-[390px] left-1/2 -translate-x-1/2 ">
      
       <Link to="/" className=" borderborder-[white] flex-1  flex flex-col items-center justify-center ">
           <House size={20} className="text-[#7e7e7e]"/>

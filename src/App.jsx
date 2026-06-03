@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="bg-[#161616] min-h-screen flex justify-center ">
-        <div className="w-full relative md:max-w-[390px] border border-[#888787]">
+        <div className="w-full relative md:max-w-[390px] md:border md:border-[#303030]">
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/watchlist" element={<WatchlistPage/>}/>
