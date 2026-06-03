@@ -7,8 +7,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-[#161616] min-h-screen flex justify-center">
-        <div className="w-full bg-[#161616] min-h-screen relative">
+      <div className="bg-[#161616] min-h-screen flex justify-center ">
+        <div className="w-full relative md:max-w-[390px] border border-[#888787]">
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/watchlist" element={<WatchlistPage/>}/>

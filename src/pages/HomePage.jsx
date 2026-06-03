@@ -22,13 +22,13 @@ const HomePage = () => {
   const [textInput, setTextInput] = useState("");
 
   const { searchResults, qty, isLoading } = useFetchSearch(textInput);
-  console.log(searchResults)
+
   const submitSearch = (e) => {
     e.preventDefault();
   };
 
   return (
-    <div className="min-h-screen bg-[#161616] pb-20">
+    <div className="min-h-screen bg-[#161616] pb-20 relative">
       {/*--------------------- Navbar -------------------*/}
 
       {/* -------Header -------*/}
@@ -66,7 +66,9 @@ const HomePage = () => {
         >
           {/* result จำนวน */}
 
-          <div className="text-[#999696] text-sm">{qty} RESULTS</div>
+            <div className="text-[#999696] text-sm">
+          {isLoading ? "" : `${qty}RESULTS`}
+            </div>
 
           {/* จุด map */}
           <div>

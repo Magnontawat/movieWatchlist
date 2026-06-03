@@ -13,7 +13,7 @@ const Section = ({ title, movies =[], type }) => {
       </div>
 
       {/* ส่วนของ Card */}
-      <div className="flex gap-5 overflow-x-auto no-scrollbar px-3">
+      <div className="flex gap-5 overflow-x-auto styled-scrollbar px-3 md:styled-scrollbar pb-1">
         {movies.map((item) => {
           return <MovieCard key={item.id} title={item.title || item.name} release_date={item.release_date} poster_path={item.poster_path} first_air_date={item.first_air_date} id={item.id} type={type}/>
         })}
