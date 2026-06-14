@@ -3,6 +3,7 @@ import WatchlistPage from "./pages/WatchlistPage";
 import SettingPage from "./pages/SettingPage";
 import DetailMoviePage from './pages/DetailMoviePage';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SeeAllPage from "./pages/SeeAllPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/watchlist" element={<WatchlistPage/>}/>
           <Route path="/setting" element={<SettingPage/>}/>
           <Route path="/detail/:id" element={<DetailMoviePage/>}/>
+          <Route path="/seeall/:category" element={<SeeAllPage/>}/>
         </Routes>
         </div>
       </div>

@@ -13,7 +13,6 @@ export const useNowShowing =()=> {
             try{
                 const resp = await fetchTMDB(`${URL_TRENDING}${API_KEY}`)
                 setNowShowing(resp.results)
-
             }catch(error){
                 console.error('Fetch ผิดพลาด',error.message)
             }

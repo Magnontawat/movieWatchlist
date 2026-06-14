@@ -30,3 +30,4 @@ const MovieCard = (info) => {
 };
 
 export default MovieCard;
+

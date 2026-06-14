@@ -18,7 +18,6 @@ const HomePage = () => {
   const { upComing } = useUpComing();
   const { topRateMovies } = useTopRateMovies();
   const { topRateTV } = useTopRateTV();
-
   const [textInput, setTextInput] = useState("");
 
   const { searchResults, qty, isLoading } = useFetchSearch(textInput);
@@ -60,7 +59,7 @@ const HomePage = () => {
             ${
               textInput
                 ? "opacity-100 translate-y-0 bg-[#444444] rounded-xl text-[white] px-5 my-3"
-                : "opacity-0 -translate-y-2 pointer-evenrs-none"
+                : "opacity-0 -translate-y-2 pointer-events-none"
             }
             `}
         >
@@ -92,21 +91,22 @@ const HomePage = () => {
       </div>
       {/* ---------------------รายการต่างๆ ------------------*/}
       {/*  Now Showing */}
-      <Section title="Now Showing" movies={nowShowing} type="movie" />
+      <Section title="Now Showing" movies={nowShowing} type="movie" category="now_playing" />
       {/*  upcoming */}
-      <Section title="Upcoming" movies={upComing} type="movie" />
+      <Section title="Upcoming" movies={upComing} type="movie" category="upcoming"/>
       {/* trending movie */}
-      <Section title="Trending Movies" movies={moviesTrend} type="movie" />
+      <Section title="Trending Movies" movies={moviesTrend} type="movie" category="trending_movies" />
       {/* trending TV */}
-      <Section title="Trending TV" movies={tvTrending} type="tv" />
+      <Section title="Trending TV" movies={tvTrending} type="tv" category="trending_tv" />
       {/* Top Rated Movies*/}
       <Section
         title="Top Rated Movies EVER"
         movies={topRateMovies}
         type="movie"
+        category="top_rated_movies_ever"
       />
       {/* Top Rated TV */}
-      <Section title="Top Rated TV EVER" movies={topRateTV} type="tv" />
+      <Section title="Top Rated TV EVER" movies={topRateTV} type="tv" category="top_rated_tv_ever" />
       <BottomNav />
     </div>
   );
