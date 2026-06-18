@@ -16,7 +16,7 @@ export const useDetailMovies = (id,type) =>{
             try{
 
                 const respTMDB = await fetchTMDB(`https://api.themoviedb.org/3/${type}/${id}?api_key=${API_KEY}`)
-                console.log(respTMDB)
+               
 
                 let respOMDB = null
                 let imdb_id = null

@@ -14,7 +14,7 @@ const BottomNav = () => {
       <Link to="/watchlist" className=" border-[white]  flex-1 flex flex-col items-center justify-center">
           <Bookmark size={20} className="text-[#7e7e7e] "/>
           <p className="text-[#7e7e7e] text-md">Watchlist</p>
-      </Link>`
+      </Link>
 
       <Link to="/setting" className=" border-[white]  flex-1 flex flex-col items-center justify-center">
           <Settings size={20} className="text-[#7e7e7e]"/>

@@ -10,7 +10,7 @@ const Section = ({ title, movies =[], type , category }) => {
       {/* ส่วนหัวของ Section */}
       <div className="flex justify-between mx-3 pb-1">
         <h2 className="text-[white]">{title}</h2>
-        <Link to={`/seeall/${category}`} className="text-sm text-[#868686] hover:text-[white]"> See all </Link>
+        <Link to={`/seeall/${category}` } state={{type : type}} className="text-sm text-[#868686] hover:text-[white]"> See all </Link>
       </div>
 
       {/* ส่วนของ Card */}
@@ -22,5 +22,4 @@ const Section = ({ title, movies =[], type , category }) => {
     </div>
   );
 };
-[]
 export default Section;
